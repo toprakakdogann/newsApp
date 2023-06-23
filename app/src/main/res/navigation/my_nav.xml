@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/newsFragment">
+
+    <fragment
+        android:id="@id/newsFragment"
+        android:name="com.toprak.newsapplication.fragment.NewsFragment"
+        android:label="Business"
+        tools:layout="@layout/fragment_news">
+        <action
+            android:id="@+id/action_newsFragment_to_bottomSheetFilter"
+            app:destination="@+id/bottomSheetFilter"/>
+        <action
+            android:id="@+id/action_newsFragment_to_detailsFragment"
+            app:destination="@+id/detailsActivity"/>
+    </fragment>
+
+    <fragment
+        android:id="@id/favoritesFragment"
+        android:name="com.toprak.newsapplication.fragment.FavoritesFragment"
+        android:label="Favorites"
+        tools:layout="@layout/fragment_favorites">
+        <action
+            android:id="@+id/action_favoritesFragment_to_detailsFragment"
+            app:destination="@+id/detailsActivity"/>
+    </fragment>
+
+    <dialog
+        android:id="@id/bottomSheetFilter"
+        android:name="com.toprak.newsapplication.fragment.BottomSheetFilter"
+        android:label="bottom_sheet_filter"
+        tools:layout="@layout/bottom_sheet_filter">
+        <action
+            android:id="@+id/action_bottomSheetFilter_to_newsFragment"
+            app:destination="@+id/newsFragment"/>
+        <action
+            android:id="@+id/action_bottomSheetFilter_to_newsTeslaFragment"
+            app:destination="@+id/newsTeslaFragment"/>
+        <action
+        android:id="@+id/action_bottomSheetFilter_to_newsTechFragment"
+        app:destination="@+id/newsTechFragment"/>
+        <action
+            android:id="@+id/action_bottomSheetFilter_self"
+            app:destination="@+id/bottomSheetFilter"/>
+    </dialog>
+
+    <fragment
+        android:id="@id/newsTeslaFragment"
+        android:name="com.toprak.newsapplication.fragment.NewsTeslaFragment"
+        android:label="Tesla"
+        tools:layout="@layout/fragment_news_tesla">
+        <action
+            android:id="@+id/action_newsTeslaFragment_to_bottomSheetFilter"
+            app:destination="@+id/bottomSheetFilter"/>
+        <action
+            android:id="@+id/action_newsTeslaFragment_to_detailsFragment"
+            app:destination="@+id/detailsFragment"/>
+        <action
+            android:id="@+id/action_newsTeslaFragment_to_detailsActivity2"
+            app:destination="@+id/detailsActivity"/>
+    </fragment>
+
+    <fragment
+        android:id="@id/newsTechFragment"
+        android:name="com.toprak.newsapplication.fragment.NewsTechFragment"
+        android:label="Technology"
+        tools:layout="@layout/fragment_news_tech">
+        <action
+            android:id="@+id/action_newsTechFragment_to_bottomSheetFilter"
+            app:destination="@+id/bottomSheetFilter"/>
+        <action
+            android:id="@+id/action_newsTechFragment_to_detailsFragment"
+            app:destination="@+id/detailsFragment"/>
+        <action
+            android:id="@+id/action_newsTechFragment_to_detailsActivity2"
+            app:destination="@+id/detailsActivity"/>
+    </fragment>
+
+    <activity
+        android:id="@+id/detailsActivity"
+        android:name="com.toprak.newsapplication.activity.DetailsActivity"
+        android:label="Details"
+        tools:layout="@layout/activity_details">
+        <argument
+            android:name="article"
+            app:argType="com.toprak.newsapplication.model.Article"/>
+    </activity>
+
+    <fragment
+        android:id="@id/detailsFragment"
+        android:name="com.toprak.newsapplication.fragment.DetailsFragment"
+        android:label="Details"
+        tools:layout="@layout/fragment_details">
+        <argument
+            android:name="article"
+            app:argType="com.toprak.newsapplication.model.Article"/>
+    </fragment>
+
+</navigation>

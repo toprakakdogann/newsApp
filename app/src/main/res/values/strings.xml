@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">News Application</string>
+
+    <string name="title_bottom_sheet">Categories</string>
+    <string name="hello_blank_fragment">Hello Blank Fragment</string>
+    <string name="save_to_favorites">Save to Favorites</string>
+    <string name="delete_all">Delete All</string>
+</resources>
