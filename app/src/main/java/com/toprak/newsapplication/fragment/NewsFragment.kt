@@ -1,6 +1,5 @@
 package com.toprak.newsapplication.fragment
 
-import android.net.NetworkRequest
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -63,7 +62,7 @@ class NewsFragment : Fragment() {
     }
 
     private fun requestApiData(){
-        Log.d("News Fragment", "requestApiData called")
+        Log.d("RecipesFragment", "requestApiData called")
         mainViewModel.getNews()
         mainViewModel.newsResponse.observe(viewLifecycleOwner) { response ->
             when(response){

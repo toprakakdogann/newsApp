@@ -23,16 +23,14 @@
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             android:orientation="vertical"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            app:layout_constraintTop_toBottomOf="parent"
+            app:shimmer_recycler_item_count="3"
+            app:shimmer_recycler_layout="@layout/placeholder_row_layout"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintVertical_bias="0.0"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:shimmer_recycler_item_count="4"
-            app:shimmer_recycler_layout="@layout/placeholder_row_layout"
-            tools:ignore="MissingClass" />
+            app:layout_constraintVertical_bias="0.0"/>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/categories"
@@ -46,30 +44,30 @@
             android:backgroundTint="@color/purple_500"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:tint="@color/white"
-            tools:ignore="SpeakableTextPresentCheck"/>
+            app:tint="@color/white"
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <ImageView
             android:id="@+id/error_imageView"
+            readApiResponse="@{mainViewModel.newsResponse}"
+            readDatabase="@{mainViewModel.readNews}"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            readApiResponse="@{mainViewModel.newsTeslaResponse}"
-            readDatabase="@{mainViewModel.readNews}"
             android:alpha="0.4"
             android:src="@drawable/ic_no_internet"
             android:visibility="invisible"
-            app:layout_constraintTop_toBottomOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintVertical_bias="0.38"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/shimmer_recycler_view"/>
+            app:layout_constraintTop_toTopOf="@+id/shimmer_recycler_view"
+            app:layout_constraintVertical_bias="0.38" />
 
         <TextView
             android:id="@+id/error_textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            readApiResponse2="@{mainViewModel.newsTeslaResponse}"
+            readApiResponse2="@{mainViewModel.newsResponse}"
             readDatabase2="@{mainViewModel.readNews}"
             android:layout_marginTop="8dp"
             android:alpha="0.4"
@@ -77,9 +75,9 @@
             android:textSize="18sp"
             android:textStyle="bold"
             android:visibility="invisible"
-            app:layout_constraintTop_toBottomOf="@id/error_imageView"
             app:layout_constraintEnd_toEndOf="@id/error_imageView"
-            app:layout_constraintStart_toStartOf="@id/error_imageView"/>
+            app:layout_constraintStart_toStartOf="@id/error_imageView"
+            app:layout_constraintTop_toBottomOf="@id/error_imageView" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

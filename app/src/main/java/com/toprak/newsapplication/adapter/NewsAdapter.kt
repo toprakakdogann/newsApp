@@ -51,7 +51,7 @@ class NewsAdapter : RecyclerView.Adapter<NewsAdapter.MyViewHolder>(){
     fun setData(newData: News) {
         val newsDiffUtil = NewsDiffUtil(news, newData.articles)
         val diffUtilResult = DiffUtil.calculateDiff(newsDiffUtil)
-        news =newData.articles
+        news = newData.articles
         diffUtilResult.dispatchUpdatesTo(this)
     }
 

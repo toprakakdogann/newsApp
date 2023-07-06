@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/ic_favorite.xml" value="0.11" />
+        <entry key="app/src/main/res/drawable/ic_filter.xml" value="0.113" />
         <entry key="app/src/main/res/layout/activity_details.xml" value="0.1109375" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.16893115942028986" />
         <entry key="app/src/main/res/layout/bottom_sheet_filter.xml" value="0.11197916666666667" />
@@ -15,7 +16,7 @@
         <entry key="app/src/main/res/layout/fragment_news_tech.xml" value="0.11041666666666666" />
         <entry key="app/src/main/res/layout/fragment_news_tesla.xml" value="0.11041666666666666" />
         <entry key="app/src/main/res/layout/news_row_layout.xml" value="0.109375" />
-        <entry key="app/src/main/res/layout/placeholder_row_layout.xml" value="0.11041666666666666" />
+        <entry key="app/src/main/res/layout/placeholder_row_layout.xml" value="0.1" />
         <entry key="app/src/main/res/menu/bottom_menu.xml" value="0.24791666666666667" />
         <entry key="app/src/main/res/menu/details_menu.xml" value="0.24791666666666667" />
         <entry key="app/src/main/res/menu/favorite_contexual_menu.xml" value="0.246875" />

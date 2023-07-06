@@ -1,6 +1,5 @@
 package com.toprak.newsapplication.data.network
 
-import android.provider.SyncStateContract
 import com.toprak.newsapplication.model.News
 import com.toprak.newsapplication.util.Constants
 import retrofit2.http.GET

@@ -75,7 +75,7 @@ class MainViewModel @Inject constructor(
                 offlineCacheNews(news)
             }
         }catch (e: Exception){
-            val error = 0
+            val error = e
             println("News api exception: $error")
             newsResponse.value = NetworkResult.Error("News not found.")
         }
@@ -93,7 +93,7 @@ class MainViewModel @Inject constructor(
                 offlineCacheNews(news)
             }
         }catch (e: Exception){
-            val error = 0
+            val error = e
             println("News api exception: $error")
             newsTeslaResponse.value = NetworkResult.Error("News not found.")
         }
@@ -111,7 +111,7 @@ class MainViewModel @Inject constructor(
                 offlineCacheNews(news)
             }
         }catch (e: Exception){
-            val error = 0
+            val error = e
             println("News api exception: $error")
             newsTechResponse.value = NetworkResult.Error("News not found.")
         }

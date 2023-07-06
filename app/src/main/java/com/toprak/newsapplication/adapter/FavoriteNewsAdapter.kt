@@ -20,8 +20,7 @@ class FavoriteNewsAdapter (
     private val mainViewModel: MainViewModel
     ): RecyclerView.Adapter<FavoriteNewsAdapter.MyViewHolder>(), ActionMode.Callback{
 
-        private var multiSeletion = false
-
+    private var multiSeletion = false
     private lateinit var mActionMode: ActionMode
     private lateinit var rootView: View
     private var selectedNews = arrayListOf<FavoritesEntity>()
@@ -65,7 +64,7 @@ class FavoriteNewsAdapter (
                applySelection(holder, currentNews)
            }else{
                val action =
-                   FavoritesFragmentDirections.actionFavoritesFragmentToDetailsFragment(
+                   FavoritesFragmentDirections.actionFavoritesFragmentToDetailsActivity(
                        currentNews.article
                    )
                holder.itemView.findNavController().navigate(action)
@@ -88,6 +87,10 @@ class FavoriteNewsAdapter (
     private fun applySelection(holder:MyViewHolder, currentNews: FavoritesEntity){
         if(selectedNews.contains(currentNews)){
             selectedNews.remove(currentNews)
+            changeNewsStyle(holder, R.color.white, R.color.gray)
+            applyActionModeTitle()
+        }else{
+            selectedNews.add(currentNews)
             changeNewsStyle(holder, R.color.cardBackground, R.color.purple_500)
             applyActionModeTitle()
         }
@@ -111,7 +114,7 @@ class FavoriteNewsAdapter (
                 mActionMode.title = "${selectedNews.size} item selected"
             }
 
-            2 ->{
+            else ->{
                 mActionMode.title = "${selectedNews.size} items selected"
             }
         }

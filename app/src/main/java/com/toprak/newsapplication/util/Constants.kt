@@ -4,7 +4,7 @@ object Constants {
 
     //API
 
-    const val BASE_URL = "https://newsapi.org"
+    const val BASE_URL = "https://newsapi.org/"
     const val API_KEY = "eaef9944547c487e87fcae9833b204e6"
 
     //ROOM DB
